@@ -1,28 +1,28 @@
-# Pull Request Template
+# 名称
 
-## Description
+## 描述
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+请提供更改摘要以及已解决的问题。还请包括相关的动机和背景。列出此更改所需的所有依赖项。
 
 Fixes # (issue)
 
-## Type of change
+## 更改的类型
 
-Please delete options that are not relevant.
+请选择更改类型
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+- [ ] 非阻塞 Bug 修复 (不会影响存量功能)
+- [ ] 新功能 (non-breaking change which adds functionality)
+- [ ] 阻塞性 Bug 修复 (功能受影响))
+- [ ] 文档更新
 
-## How Has This Been Tested?
+## 如何测试
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
+请描述你为验证更改而运行的测试。提供说明，以便我们复制。还请列出您的测试配置的任何相关详细信息。
 
 - [ ] Test A
 - [ ] Test B
 
-**Test Configuration**:
+**测试配置**:
 * Firmware version:
 * Hardware:
 * Toolchain:
@@ -30,11 +30,11 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 
 ## Checklist:
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+- [ ] 我的代码遵循该项目的样式准则
+- [ ] 我已经对自己的代码进行了自检
+- [ ] 我已经评论了我的代码，尤其是在难以理解的领域
+- [ ] 我已经对文档进行了相应的更改
+- [ ] 我的更改没有新的警告
+- [ ] 我添加了一些测试来证明我的修复有效或功能正常
+- [ ] 新的和现有的单元测试通过我的更改在本地通过
+- [ ] 任何相关更改已合并并发布在下游模块中
