@@ -1,6 +1,16 @@
-# E2eosAngularAntd
+# E2Eos Angular Antd
+
+Angular Antd@8.0.0 组件库的封装，用于可视化搭建。
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+
+## 标准
+- 所有组件存放于目录***src/app/components***下，请使用Angular CLI创建组件
+- 所有组件注册在***src/app/component.module.ts***里
+- 所有组件对应的展示、测试页面位于目录***src/app/pages***下，请使用Angular CLI创建页面
+- 所有页面**路有关系**配置于***src/app/app-routing.module.ts***中
+- 所有页面的**导航信息**配置于***src/app/app.component.html***中
+- 每个组件一个分支，分支名为***feat/e2eos-angular-antd/[组件名]***
 
 ## Development server
 
