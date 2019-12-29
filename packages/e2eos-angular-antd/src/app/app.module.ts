@@ -10,12 +10,16 @@ import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 
 import { ComponentModule } from './component.module';
+import { ButtonPageComponent } from './pages/button-page/button-page.component';
+import { IconPageComponent } from './pages/icon-page/icon-page.component';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ButtonPageComponent,
+    IconPageComponent,
   ],
   imports: [
     BrowserModule,

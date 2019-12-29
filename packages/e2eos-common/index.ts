@@ -18,8 +18,8 @@ interface AstNodeEvents {
 export interface AstNode {
   tag: string;
   attrs: AstNodeAttributes;
-  events: AstNodeEvents;
-  children: AstNode[];
+  events?: AstNodeEvents;
+  children: (AstNode | number | string)[];
 }
 
 /**
@@ -29,6 +29,11 @@ export interface ComponentBase {
   node: AstNode;
 }
 
+export interface AstNodeAttributeConfigFieldOption {
+  label: string;
+  value: any;
+}
+
 /**
  * Node attributes config field
  */
@@ -36,14 +41,17 @@ export interface AstNodeAttributeConfigField {
   key: string;
   name: string;
   type: string;
-  value: string;
+  desc: string;
+  options?: AstNodeAttributeConfigFieldOption[];
+  clearable?: boolean;
 }
 
 /**
- * Node atributes config
+ * Node config
  */
-export interface NodeAttributeConfig {
+export interface NodeConfig {
   name: string;
   values: AstNodeAttributes;
   attrs: AstNodeAttributeConfigField[];
+  children: (AstNode | string | number)[];
 }
