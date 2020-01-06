@@ -11,19 +11,25 @@ import { JsonEditorComponent } from './components/json-editor/json-editor.compon
 import { ButtonComponent } from './components/button/button.component';
 import { ContainerComponent } from './components/container/container.component';
 import { IconComponent } from './components/icon/icon.component';
+import { InputComponent } from './components/input/input.component';
+import { InputGroupComponent } from './components/input-group/input-group.component';
 
 @NgModule({
   entryComponents: [
     JsonEditorComponent,
     ButtonComponent,
     ContainerComponent,
-    IconComponent
+    IconComponent,
+    InputComponent,
+    InputGroupComponent
   ],
   declarations: [
     JsonEditorComponent,
     ButtonComponent,
     ContainerComponent,
     IconComponent,
+    InputComponent,
+    InputGroupComponent,
   ],
   imports: [
     NgJsonEditorModule,
@@ -38,7 +44,9 @@ import { IconComponent } from './components/icon/icon.component';
     JsonEditorComponent,
     ButtonComponent,
     ContainerComponent,
-    IconComponent
+    IconComponent,
+    InputComponent,
+    InputGroupComponent
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
 })

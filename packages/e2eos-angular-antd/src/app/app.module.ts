@@ -12,6 +12,7 @@ import zh from '@angular/common/locales/zh';
 import { ComponentModule } from './component.module';
 import { ButtonPageComponent } from './pages/button-page/button-page.component';
 import { IconPageComponent } from './pages/icon-page/icon-page.component';
+import { InputPageComponent } from './pages/input-page/input-page.component';
 
 registerLocaleData(zh);
 
@@ -20,6 +21,7 @@ registerLocaleData(zh);
     AppComponent,
     ButtonPageComponent,
     IconPageComponent,
+    InputPageComponent,
   ],
   imports: [
     BrowserModule,
