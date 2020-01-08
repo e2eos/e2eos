@@ -1,29 +1,35 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { IconsProviderModule } from './icons-provider.module';
-import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgJsonEditorModule } from 'ang-jsoneditor';
+import {IconsProviderModule} from './icons-provider.module';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgJsonEditorModule} from 'ang-jsoneditor';
 
-import { JsonEditorComponent } from './components/json-editor/json-editor.component';
-import { ButtonComponent } from './components/button/button.component';
-import { ContainerComponent } from './components/container/container.component';
-import { IconComponent } from './components/icon/icon.component';
+import {JsonEditorComponent} from './components/json-editor/json-editor.component';
+import {ButtonComponent} from './components/button/button.component';
+import {ContainerComponent} from './components/container/container.component';
+import {IconComponent} from './components/icon/icon.component';
+import {GridRowComponent} from './components/grid-row/grid-row.component';
+import {GridColComponent} from './components/grid-col/grid-col.component';
 
 @NgModule({
   entryComponents: [
     JsonEditorComponent,
     ButtonComponent,
     ContainerComponent,
-    IconComponent
+    IconComponent,
+    GridRowComponent,
+    GridColComponent
   ],
   declarations: [
     JsonEditorComponent,
     ButtonComponent,
     ContainerComponent,
     IconComponent,
+    GridRowComponent,
+    GridColComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -38,8 +44,11 @@ import { IconComponent } from './components/icon/icon.component';
     JsonEditorComponent,
     ButtonComponent,
     ContainerComponent,
-    IconComponent
+    IconComponent,
+    GridRowComponent,
+    GridColComponent
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })
-export class ComponentModule { }
+export class ComponentModule {
+}
