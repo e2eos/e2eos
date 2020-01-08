@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {AstNode, NodeConfig} from 'e2eos-common/index';
 
-export const TAG_NAME = 'e2eos-ng-antd-layout';
+export const TAG_NAME = 'e2eos-ng-antd-layout-header';
 export const NODE_CONFIG: NodeConfig = {
   name: TAG_NAME,
   values: Object.freeze({}),
