@@ -13,6 +13,7 @@ import { ComponentModule } from './component.module';
 import { ButtonPageComponent } from './pages/button-page/button-page.component';
 import { IconPageComponent } from './pages/icon-page/icon-page.component';
 import { InputPageComponent } from './pages/input-page/input-page.component';
+import {GridPageComponent} from './pages/grid-page/grid-page.component';
 
 registerLocaleData(zh);
 
@@ -22,6 +23,7 @@ registerLocaleData(zh);
     ButtonPageComponent,
     IconPageComponent,
     InputPageComponent,
+    GridPageComponent,
   ],
   imports: [
     BrowserModule,

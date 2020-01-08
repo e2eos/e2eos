@@ -13,6 +13,8 @@ import { ContainerComponent } from './components/container/container.component';
 import { IconComponent } from './components/icon/icon.component';
 import { InputComponent } from './components/input/input.component';
 import { InputGroupComponent } from './components/input-group/input-group.component';
+import {GridColComponent} from './components/grid-col/grid-col.component';
+import {GridRowComponent} from './components/grid-row/grid-row.component';
 
 @NgModule({
   entryComponents: [
@@ -21,7 +23,9 @@ import { InputGroupComponent } from './components/input-group/input-group.compon
     ContainerComponent,
     IconComponent,
     InputComponent,
-    InputGroupComponent
+    InputGroupComponent,
+    GridColComponent,
+    GridRowComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -30,6 +34,8 @@ import { InputGroupComponent } from './components/input-group/input-group.compon
     IconComponent,
     InputComponent,
     InputGroupComponent,
+    GridColComponent,
+    GridRowComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -46,7 +52,9 @@ import { InputGroupComponent } from './components/input-group/input-group.compon
     ContainerComponent,
     IconComponent,
     InputComponent,
-    InputGroupComponent
+    InputGroupComponent,
+    GridColComponent,
+    GridRowComponent
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
 })
