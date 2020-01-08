@@ -13,6 +13,10 @@ import {ComponentModule} from './component.module';
 import {ButtonPageComponent} from './pages/button-page/button-page.component';
 import {IconPageComponent} from './pages/icon-page/icon-page.component';
 import {GridPageComponent} from './pages/grid-page/grid-page.component';
+import {LayoutFooterComponent} from './components/layout-footer/layout-footer.component';
+import {LayoutHeaderComponent} from './components/layout-header/layout-header.component';
+import {LayoutSiderComponent} from './components/layout-sider/layout-sider.component';
+import {LayoutContentComponent} from './components/layout-content/layout-content.component';
 
 registerLocaleData(zh);
 
@@ -21,7 +25,11 @@ registerLocaleData(zh);
     AppComponent,
     ButtonPageComponent,
     IconPageComponent,
-    GridPageComponent
+    GridPageComponent,
+    LayoutContentComponent,
+    LayoutFooterComponent,
+    LayoutHeaderComponent,
+    LayoutSiderComponent
   ],
   imports: [
     BrowserModule,
