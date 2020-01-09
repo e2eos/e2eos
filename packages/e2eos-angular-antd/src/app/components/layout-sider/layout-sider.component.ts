@@ -14,92 +14,128 @@ export const NODE_CONFIG: NodeConfig = {
     nzTrigger: false,
     nzZeroTrigger: false,
     nzWidth: false,
-    nzTheme: false,
-    nzCollapsedChange: (e) => e
+    nzTheme: false
   }),
   attrs: [
     {
-      key: 'nzGhost',
-      type: 'boolean',
-      name: 'nzGhost',
-      desc: '幽灵属性，使按钮背景透明'
-    },
-    {
-      key: 'nzLoading',
-      type: 'boolean',
-      name: 'nzLoading',
-      desc: '设置按钮载入状态'
-    },
-    {
-      key: 'nzShape',
+      key: 'nzBreakpoint',
       type: 'select',
-      name: 'nzShape',
-      desc: '设置按钮形状，可选值为 circleround 或者不设',
-      options: [{
-        label: 'circle',
-        value: 'circle'
-      }, {
-        label: 'round',
-        value: 'round'
-      }]
-    },
-    {
-      key: 'nzSize',
-      type: 'select',
-      name: 'nzSize',
+      name: 'nzBreakpoint',
       clearable: false,
-      desc: '设置按钮大小，可选值为 smalllarge 或者不设',
-      options: [{
-        label: 'large',
-        value: 'large'
-      }, {
-        label: 'small',
-        value: 'small'
-      }, {
-        label: 'default',
-        value: 'default'
-      }]
+      options: [
+        {
+          label: 'xs',
+          value: 'xs'
+        },
+        {
+          label: 'sm',
+          value: 'sm'
+        },
+        {
+          label: 'md',
+          value: 'md'
+        },
+        {
+          label: 'lg',
+          value: 'lg'
+        },
+        {
+          label: 'xl',
+          value: 'xl'
+        },
+        {
+          label: 'xxl',
+          value: 'xxl'
+        }
+      ],
+      desc: '触发响应式布局的断点'
     },
     {
-      key: 'nzType',
-      type: 'select',
-      name: 'nzType',
-      clearable: false,
-      desc: '设置按钮类型',
-      options: [{
-        label: 'primary',
-        value: 'primary'
-      }, {
-        label: 'dashed',
-        value: 'dashed'
-      }, {
-        label: 'default',
-        value: 'default'
-      }, {
-        label: 'danger',
-        value: 'danger'
-      }, {
-        label: 'link',
-        value: 'link'
-      }]
-    },
-    {
-      key: 'nzBlock',
+      key: 'nzCollapsed',
       type: 'boolean',
-      name: 'nzBlock',
-      desc: '将按钮宽度调整为其父宽度的选项'
+      name: 'nzCollapsed',
+      desc: '当前收起状态，可双向绑定'
     },
+    {
+      key: 'nzCollapsedWidth',
+      type: 'input',
+      name: 'nzCollapsedWidth',
+      desc: '收缩宽度，设置为 0 会出现特殊 trigger'
+    },
+    {
+      key: 'nzCollapsible',
+      type: 'boolean',
+      name: 'nzCollapsible',
+      desc: '是否可收起'
+    },
+    {
+      key: 'nzCollapsed',
+      type: 'boolean',
+      name: 'nzCollapsed',
+      desc: '当前收起状态，可双向绑定'
+    },
+    {
+      key: 'nzReverseArrow',
+      type: 'boolean',
+      name: 'nzReverseArrow',
+      desc: '翻转折叠提示箭头的方向，当 Sider 在右边时可以使用'
+    },
+    {
+      key: 'nzTrigger',
+      type: 'input',
+      name: 'nzTrigger',
+      desc: '自定义 trigger，设置为 null 时隐藏 trigger'
+    },
+    {
+      key: 'nzZeroTrigger',
+      type: 'input',
+      name: 'nzZeroTrigger',
+      desc: '自定义 nzCollapsedWidth 为 0 时的 特殊trigger'
+    },
+    {
+      key: 'nzWidth',
+      type: 'input',
+      name: 'nzWidth',
+      desc: '宽度'
+    },
+    {
+      key: 'nzTheme',
+      type: 'select',
+      name: 'nzTheme',
+      clearable: false,
+      options: [
+        {
+          label: 'light',
+          value: 'light'
+        },
+        {
+          label: 'dark',
+          value: 'dark'
+        }
+      ],
+      desc: '题颜色'
+    },
+    {
+      key: 'nzCollapsedChange',
+      type: 'input',
+      name: 'nzCollapsedChange',
+      desc: '展开-收起时的回调函数'
+    }
   ],
   children: []
 };
 
 export interface AstLayoutSiderAttrs {
-  nzGhost?: boolean;
-  nzLoading?: boolean;
-  nzShape?: 'circle' | 'round' | undefined;
-  nzSize?: 'large' | 'small' | 'default';
-  nzType?: 'primary' | 'dashed' | 'danger' | 'default' | 'link';
-  nzBlock?: boolean;
+  nzBreakpoint?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+  nzCollapsed?: boolean;
+  nzCollapsedWidth?: number;
+  nzCollapsible?: boolean;
+  nzReverseArrow?: boolean;
+  nzTrigger?: string;
+  nzZeroTrigger?: string;
+  nzWidth?: string | number;
+  nzTheme?: 'light' | 'dark';
+  nzCollapsedChange?: (e) => object;
 }
 
 @Component({

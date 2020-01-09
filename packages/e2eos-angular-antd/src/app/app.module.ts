@@ -17,6 +17,7 @@ import {LayoutFooterComponent} from './components/layout-footer/layout-footer.co
 import {LayoutHeaderComponent} from './components/layout-header/layout-header.component';
 import {LayoutSiderComponent} from './components/layout-sider/layout-sider.component';
 import {LayoutContentComponent} from './components/layout-content/layout-content.component';
+import {LayoutPageComponent} from './pages/layout-page/layout-page.component';
 
 registerLocaleData(zh);
 
@@ -26,12 +27,9 @@ registerLocaleData(zh);
     ButtonPageComponent,
     IconPageComponent,
     GridPageComponent,
-    LayoutContentComponent,
-    LayoutFooterComponent,
-    LayoutHeaderComponent,
-    LayoutSiderComponent,
     InputPageComponent,
     GridPageComponent,
+    LayoutPageComponent
   ],
   imports: [
     BrowserModule,

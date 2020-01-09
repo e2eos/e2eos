@@ -13,6 +13,10 @@ import {ContainerComponent} from './components/container/container.component';
 import {IconComponent} from './components/icon/icon.component';
 import {InputComponent} from './components/input/input.component';
 import {InputGroupComponent} from './components/input-group/input-group.component';
+import {LayoutContentComponent} from './components/layout-content/layout-content.component';
+import {LayoutFooterComponent} from './components/layout-footer/layout-footer.component';
+import {LayoutHeaderComponent} from './components/layout-header/layout-header.component';
+import {LayoutSiderComponent} from './components/layout-sider/layout-sider.component';
 
 
 @NgModule({
@@ -25,6 +29,10 @@ import {InputGroupComponent} from './components/input-group/input-group.componen
     GridColComponent,
     InputComponent,
     InputGroupComponent,
+    LayoutContentComponent,
+    LayoutFooterComponent,
+    LayoutHeaderComponent,
+    LayoutSiderComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -35,6 +43,10 @@ import {InputGroupComponent} from './components/input-group/input-group.componen
     GridColComponent,
     InputComponent,
     InputGroupComponent,
+    LayoutContentComponent,
+    LayoutFooterComponent,
+    LayoutHeaderComponent,
+    LayoutSiderComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -53,7 +65,11 @@ import {InputGroupComponent} from './components/input-group/input-group.componen
     GridRowComponent,
     GridColComponent,
     InputComponent,
-    InputGroupComponent
+    InputGroupComponent,
+    LayoutContentComponent,
+    LayoutFooterComponent,
+    LayoutHeaderComponent,
+    LayoutSiderComponent
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })
