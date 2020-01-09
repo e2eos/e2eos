@@ -17,6 +17,10 @@ import {LayoutContentComponent} from './components/layout-content/layout-content
 import {LayoutFooterComponent} from './components/layout-footer/layout-footer.component';
 import {LayoutHeaderComponent} from './components/layout-header/layout-header.component';
 import {LayoutSiderComponent} from './components/layout-sider/layout-sider.component';
+import {CardComponent} from './components/card/card.component';
+import {CardMetaComponent} from './components/card-meta/card-meta.component';
+import {CardGridComponent} from './components/card-grid/card-grid.component';
+import {CardTabComponent} from './components/card-tab/card-tab.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import {LayoutSiderComponent} from './components/layout-sider/layout-sider.compo
     LayoutContentComponent,
     LayoutFooterComponent,
     LayoutHeaderComponent,
-    LayoutSiderComponent
+    LayoutSiderComponent,
+    CardComponent,
+    CardMetaComponent,
+    CardGridComponent,
+    CardTabComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -46,7 +54,11 @@ import {LayoutSiderComponent} from './components/layout-sider/layout-sider.compo
     LayoutContentComponent,
     LayoutFooterComponent,
     LayoutHeaderComponent,
-    LayoutSiderComponent
+    LayoutSiderComponent,
+    CardComponent,
+    CardMetaComponent,
+    CardGridComponent,
+    CardTabComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -69,7 +81,11 @@ import {LayoutSiderComponent} from './components/layout-sider/layout-sider.compo
     LayoutContentComponent,
     LayoutFooterComponent,
     LayoutHeaderComponent,
-    LayoutSiderComponent
+    LayoutSiderComponent,
+    CardComponent,
+    CardMetaComponent,
+    CardGridComponent,
+    CardTabComponent
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })

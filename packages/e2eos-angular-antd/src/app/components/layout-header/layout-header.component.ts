@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {AstNode, NodeConfig} from 'e2eos-common/index';
+import {AstNode, ComponentBase, NodeConfig} from 'e2eos-common/index';
 
 export const TAG_NAME = 'e2eos-ng-antd-layout-header';
 export const NODE_CONFIG: NodeConfig = {
@@ -13,7 +13,7 @@ export const NODE_CONFIG: NodeConfig = {
   templateUrl: './layout-header.component.html',
   styleUrls: ['./layout-header.component.scss']
 })
-export class LayoutHeaderComponent implements OnInit {
+export class LayoutHeaderComponent implements ComponentBase, OnInit {
   @Input() node: AstNode = {
     tag: TAG_NAME,
     attrs: NODE_CONFIG.attrs,

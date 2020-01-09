@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {AstNode, NodeConfig} from 'e2eos-common/index';
+import {Component, OnInit, Input} from '@angular/core';
+import {AstNode, ComponentBase, NodeConfig} from 'e2eos-common/index';
 
 export const TAG_NAME = 'e2eos-ng-antd-layout-footer';
 export const NODE_CONFIG: NodeConfig = {
@@ -8,12 +8,13 @@ export const NODE_CONFIG: NodeConfig = {
   attrs: [],
   children: []
 };
+
 @Component({
   selector: 'e2eos-ng-antd-layout-footer',
   templateUrl: './layout-footer.component.html',
   styleUrls: ['./layout-footer.component.scss']
 })
-export class LayoutFooterComponent implements OnInit {
+export class LayoutFooterComponent implements ComponentBase, OnInit {
   @Input() node: AstNode = {
     tag: TAG_NAME,
     attrs: NODE_CONFIG.attrs,
@@ -23,7 +24,9 @@ export class LayoutFooterComponent implements OnInit {
   get attrs() {
     return this.node.attrs || NODE_CONFIG.attrs;
   }
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

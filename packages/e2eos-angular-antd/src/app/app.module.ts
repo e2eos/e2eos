@@ -18,6 +18,7 @@ import {LayoutHeaderComponent} from './components/layout-header/layout-header.co
 import {LayoutSiderComponent} from './components/layout-sider/layout-sider.component';
 import {LayoutContentComponent} from './components/layout-content/layout-content.component';
 import {LayoutPageComponent} from './pages/layout-page/layout-page.component';
+import {CardPageComponent} from './pages/card-page/card-page.component';
 
 registerLocaleData(zh);
 
@@ -29,7 +30,8 @@ registerLocaleData(zh);
     GridPageComponent,
     InputPageComponent,
     GridPageComponent,
-    LayoutPageComponent
+    LayoutPageComponent,
+    CardPageComponent
   ],
   imports: [
     BrowserModule,
