@@ -1,3 +1,3 @@
-<!--<nz-collapse [nzDisabled]="attrs.nzDisabled" [nzHeader]="attrs.nzHeader" [nzExpandedIcon]="attrs.nzExpandedIcon" [nzExtra]="attrs.nzExtra" [nzShowArrow]="attrs.nzShowArrow" [nzActive]="attrs.nzActive" [nzActiveChange]="attrs.nzActiveChange">-->
-<!--  <e2eos-ng-antd-container [node]="n" *ngFor="let n of node.children"></e2eos-ng-antd-container>-->
-<!--</nz-collapse>-->
+<nz-collapse><nz-collapse-panel [nzDisabled]="attrs.nzDisabled" [nzHeader]="attrs.nzHeader" [nzExpandedIcon]="attrs.nzExpandedIcon" [nzExtra]="attrs.nzExtra" [nzShowArrow]="attrs.nzShowArrow" [nzActive]="attrs.nzActive" >
+  <e2eos-ng-antd-container [node]="n" *ngFor="let n of node.children"></e2eos-ng-antd-container>
+</nz-collapse-panel></nz-collapse>

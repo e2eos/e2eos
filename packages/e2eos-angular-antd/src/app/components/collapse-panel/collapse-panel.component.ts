@@ -6,29 +6,62 @@ export const TAG_NAME = 'e2eos-ng-antd-collapse-panel';
 export const NODE_CONFIG: NodeConfig = {
   name: TAG_NAME,
   values: Object.freeze({
-    nzAccordion: false,
-    nzBordered: true
+    nzDisabled: false,
+    nzHeader: '',
+    nzExpandedIcon: '',
+    nzExtra: '',
+    nzShowArrow: true,
+    nzActive: true,
+    // nzActiveChange :(e)=>e
   }),
   attrs: [
     {
-      key: 'nzAccordion',
+      key: 'nzDisabled',
       type: 'boolean',
-      name: 'nzAccordion',
-      desc: '是否每次只打开一个tab'
+      name: 'nzDisabled',
+      desc: '禁用后的面板展开与否将无法通过用户交互改变'
     },
     {
-      key: 'nzBordered',
+      key: 'nzHeader',
+      type: 'string',
+      name: 'nzHeader',
+      desc: '面板头内容'
+    },
+    {
+      key: 'nzExpandedIcon',
+      type: 'string',
+      name: 'nzExpandedIcon',
+      desc: '自定义切换图标'
+    },
+    {
+      key: 'nzExtra',
+      type: 'string',
+      name: 'nzExtra',
+      desc: '自定义渲染每个面板右上角的内容'
+    },
+    {
+      key: 'nzShowArrow',
       type: 'boolean',
-      name: 'nzBordered',
-      desc: '是否有边框'
+      name: 'nzShowArrow',
+      desc: '是否展示箭头'
+    },
+    {
+      key: 'nzActive',
+      type: 'boolean',
+      name: 'nzActive',
+      desc: '面板头内容'
     }
   ],
   children: []
 };
 
 export interface AstCollapsePanelAttrs {
-  nzAccordion?: boolean;
-  nzBordered?: boolean;
+  nzDisabled?: boolean;
+  nzHeader?: string;
+  nzExpandedIcon?: string;
+  nzExtra?: string;
+  nzShowArrow?: boolean;
+  nzActive?: boolean;
 }
 
 @Component({
