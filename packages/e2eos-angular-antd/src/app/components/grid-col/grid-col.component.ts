@@ -10,7 +10,7 @@ export const NODE_CONFIG: NodeConfig = {
     nzOrder: 0,
     nzPull: 0,
     nzPush: 0,
-    nzSpan: '',
+    nzSpan: 10,
     nzXs: '',
     nzSm: '',
     nzMd: '',
