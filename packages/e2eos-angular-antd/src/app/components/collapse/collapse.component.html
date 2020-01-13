@@ -1,3 +1,8 @@
 <nz-collapse [nzAccordion]="attrs.nzAccordion" [nzBordered]="attrs.nzBordered">
+  <nz-collapse-panel [nzDisabled]="panelAttrs.nzDisabled" [nzHeader]="panelAttrs.nzHeader" [nzExpandedIcon]="panelAttrs.nzExpandedIcon"
+                     [nzExtra]="panelAttrs.nzExtra" [nzShowArrow]="panelAttrs.nzShowArrow" [nzActive]="panelAttrs.nzActive"
+                     (nzActiveChange)="activeChange($event)">
+    <e2eos-ng-antd-container [node]="n" *ngFor="let n of node1.children"></e2eos-ng-antd-container>
+  </nz-collapse-panel>
   <e2eos-ng-antd-container [node]="n" *ngFor="let n of node.children"></e2eos-ng-antd-container>
 </nz-collapse>

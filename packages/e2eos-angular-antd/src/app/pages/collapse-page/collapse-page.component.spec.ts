@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CollapsePanelComponent } from './collapse-panel.component';
+import { CollapsePageComponent } from './collapse-page.component';
 
-describe('CollapsePanelComponent', () => {
-  let component: CollapsePanelComponent;
-  let fixture: ComponentFixture<CollapsePanelComponent>;
+describe('CollapsePageComponent', () => {
+  let component: CollapsePageComponent;
+  let fixture: ComponentFixture<CollapsePageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CollapsePanelComponent ]
+      declarations: [ CollapsePageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CollapsePanelComponent);
+    fixture = TestBed.createComponent(CollapsePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
