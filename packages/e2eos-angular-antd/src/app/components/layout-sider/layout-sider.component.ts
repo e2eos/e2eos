@@ -1,6 +1,5 @@
 import {Component, OnInit, Input, EventEmitter, Output, ViewChild} from '@angular/core';
 import {AstNode, ComponentBase, NodeConfig} from 'e2eos-common/index';
-import {JsonEditorComponent as JsonComponent} from 'ang-jsoneditor';
 
 export const TAG_NAME = 'e2eos-ng-antd-layout-sider';
 
