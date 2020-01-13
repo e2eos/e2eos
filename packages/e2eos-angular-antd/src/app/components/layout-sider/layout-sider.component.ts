@@ -1,5 +1,6 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output, ViewChild} from '@angular/core';
 import {AstNode, ComponentBase, NodeConfig} from 'e2eos-common/index';
+import {JsonEditorComponent as JsonComponent} from 'ang-jsoneditor';
 
 export const TAG_NAME = 'e2eos-ng-antd-layout-sider';
 
@@ -135,7 +136,6 @@ export interface AstLayoutSiderAttrs {
   nzZeroTrigger?: string;
   nzWidth?: string | number;
   nzTheme?: 'light' | 'dark';
-  nzCollapsedChange?: (e) => object;
 }
 
 @Component({
@@ -151,6 +151,8 @@ export class LayoutSiderComponent implements ComponentBase, OnInit {
     children: NODE_CONFIG.children
   };
 
+  @Output() nzCollapsedChange = new EventEmitter();
+
   get attrs(): AstLayoutSiderAttrs {
     return this.node.attrs || NODE_CONFIG.attrs;
   }
@@ -159,6 +161,10 @@ export class LayoutSiderComponent implements ComponentBase, OnInit {
   }
 
   ngOnInit() {
+  }
+
+  collapsedChange(falg: boolean) {
+    this.nzCollapsedChange.emit(falg);
   }
 
 }
