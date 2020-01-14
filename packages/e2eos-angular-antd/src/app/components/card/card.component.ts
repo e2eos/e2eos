@@ -13,7 +13,7 @@ export const NODE_CONFIG: NodeConfig = {
     nzExtra: '',
     nzHoverable: false,
     nzLoading: false,
-    nzTitle: '',
+    nzTitle: '这是标题',
     nzType: '',
     nzSize: 'default'
   }),
