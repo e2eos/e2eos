@@ -7,8 +7,8 @@ import { InputPageComponent } from './pages/input-page/input-page.component';
 import {LayoutPageComponent} from './pages/layout-page/layout-page.component';
 import {CardPageComponent} from './pages/card-page/card-page.component';
 import {CollapsePageComponent} from './pages/collapse-page/collapse-page.component';
-import {InputNumberComponent} from './components/input-number/input-number.component';
 import {InputNumberPageComponent} from './pages/input-number-page/input-number-page.component';
+import {RadioPageComponent} from './pages/radio-page/radio-page.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'button' },
@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'layout', component: LayoutPageComponent },
   { path: 'card', component: CardPageComponent },
   { path: 'collapse', component: CollapsePageComponent },
-  { path: 'input-number', component: InputNumberPageComponent }
+  { path: 'input-number', component: InputNumberPageComponent },
+  { path: 'radio', component: RadioPageComponent }
 ];
 
 @NgModule({

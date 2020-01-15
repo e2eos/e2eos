@@ -17,6 +17,7 @@ import {LayoutPageComponent} from './pages/layout-page/layout-page.component';
 import {CardPageComponent} from './pages/card-page/card-page.component';
 import {CollapsePageComponent} from './pages/collapse-page/collapse-page.component';
 import {InputNumberPageComponent} from './pages/input-number-page/input-number-page.component';
+import {RadioPageComponent} from './pages/radio-page/radio-page.component';
 
 registerLocaleData(zh);
 
@@ -31,7 +32,8 @@ registerLocaleData(zh);
     LayoutPageComponent,
     CardPageComponent,
     CollapsePageComponent,
-    InputNumberPageComponent
+    InputNumberPageComponent,
+    RadioPageComponent
   ],
   imports: [
     BrowserModule,

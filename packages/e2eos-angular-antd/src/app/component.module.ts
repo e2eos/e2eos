@@ -23,6 +23,7 @@ import {CardGridComponent} from './components/card-grid/card-grid.component';
 import {CardTabComponent} from './components/card-tab/card-tab.component';
 import {CollapseComponent} from './components/collapse/collapse.component';
 import {InputNumberComponent} from './components/input-number/input-number.component';
+import {RadioComponent} from './components/radio/radio.component';
 
 
 
@@ -45,7 +46,8 @@ import {InputNumberComponent} from './components/input-number/input-number.compo
     CardGridComponent,
     CardTabComponent,
     CollapseComponent,
-    InputNumberComponent
+    InputNumberComponent,
+    RadioComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -65,7 +67,8 @@ import {InputNumberComponent} from './components/input-number/input-number.compo
     CardGridComponent,
     CardTabComponent,
     CollapseComponent,
-    InputNumberComponent
+    InputNumberComponent,
+    RadioComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -94,7 +97,8 @@ import {InputNumberComponent} from './components/input-number/input-number.compo
     CardGridComponent,
     CardTabComponent,
     CollapseComponent,
-    InputNumberComponent
+    InputNumberComponent,
+    RadioComponent
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })
