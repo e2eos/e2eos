@@ -16,6 +16,7 @@ import { InputPageComponent } from './pages/input-page/input-page.component';
 import {LayoutPageComponent} from './pages/layout-page/layout-page.component';
 import {CardPageComponent} from './pages/card-page/card-page.component';
 import {CollapsePageComponent} from './pages/collapse-page/collapse-page.component';
+import {InputNumberPageComponent} from './pages/input-number-page/input-number-page.component';
 
 registerLocaleData(zh);
 
@@ -29,7 +30,8 @@ registerLocaleData(zh);
     GridPageComponent,
     LayoutPageComponent,
     CardPageComponent,
-    CollapsePageComponent
+    CollapsePageComponent,
+    InputNumberPageComponent
   ],
   imports: [
     BrowserModule,

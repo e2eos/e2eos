@@ -22,6 +22,7 @@ import {CardMetaComponent} from './components/card-meta/card-meta.component';
 import {CardGridComponent} from './components/card-grid/card-grid.component';
 import {CardTabComponent} from './components/card-tab/card-tab.component';
 import {CollapseComponent} from './components/collapse/collapse.component';
+import {InputNumberComponent} from './components/input-number/input-number.component';
 
 
 
@@ -43,7 +44,8 @@ import {CollapseComponent} from './components/collapse/collapse.component';
     CardMetaComponent,
     CardGridComponent,
     CardTabComponent,
-    CollapseComponent
+    CollapseComponent,
+    InputNumberComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -62,7 +64,8 @@ import {CollapseComponent} from './components/collapse/collapse.component';
     CardMetaComponent,
     CardGridComponent,
     CardTabComponent,
-    CollapseComponent
+    CollapseComponent,
+    InputNumberComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -90,7 +93,8 @@ import {CollapseComponent} from './components/collapse/collapse.component';
     CardMetaComponent,
     CardGridComponent,
     CardTabComponent,
-    CollapseComponent
+    CollapseComponent,
+    InputNumberComponent
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })
