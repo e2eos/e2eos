@@ -1,0 +1,3 @@
+<nz-radio-group [ngModel]="attrs.ngModel" [nzName]="attrs.nzName" [nzDisabled]="attrs.nzDisabled" [nzSize]="attrs.nzSize" (ngModelChange)="modelChange($event)" [nzButtonStyle]="attrs.nzButtonStyle">
+  <e2eos-ng-antd-container [node]="n" *ngFor="let n of node.children"></e2eos-ng-antd-container>
+</nz-radio-group>

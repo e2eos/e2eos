@@ -1,7 +1,7 @@
-import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {AstNode, ComponentBase, NodeConfig} from 'e2eos-common/index';
 
-export const TAG_NAME = 'e2eos-ng-antd-radio';
+export const TAG_NAME = 'e2eos-ng-antd-radio-button';
 
 export const NODE_CONFIG: NodeConfig = {
   name: TAG_NAME,
@@ -29,26 +29,31 @@ export const NODE_CONFIG: NodeConfig = {
       key: 'ngModel',
       type: 'boolean',
       name: 'ngModel',
+      desc: '指定当前是否选中，可双向绑定'
+    },
+    {
+      key: 'nzValue',
+      type: 'input',
+      name: 'nzValue',
       desc: '设置 value，与 nz-radio-group 配合使用'
     }
   ],
   children: []
 };
 
-export interface AstRadioAttrs {
+export interface AstRadioButtonAttrs {
   nzAutoFocus?: boolean;
   nzDisabled?: boolean;
   ngModel?: boolean;
   nzValue?: string;
   nzLabel?: string;
 }
-
 @Component({
-  selector: 'e2eos-ng-antd-radio',
-  templateUrl: './radio.component.html',
-  styleUrls: ['./radio.component.scss']
+  selector: 'e2eos-ng-antd-radio-button',
+  templateUrl: './radio-button.component.html',
+  styleUrls: ['./radio-button.component.scss']
 })
-export class RadioComponent implements ComponentBase, OnInit {
+export class RadioButtonComponent implements ComponentBase, OnInit {
   @Input() node: AstNode = {
     tag: TAG_NAME,
     attrs: NODE_CONFIG.attrs,
@@ -56,17 +61,15 @@ export class RadioComponent implements ComponentBase, OnInit {
   };
   @Output() ngModelChange = new EventEmitter();
 
-  get attrs(): AstRadioAttrs {
+  get attrs(): AstRadioButtonAttrs {
     return this.node.attrs || NODE_CONFIG.attrs;
   }
-
-  constructor() {
+  modelChange(flag: boolean) {
+    this.ngModelChange.emit(flag);
   }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  modelChange(flag: boolean) {
-    this.ngModelChange.emit(flag);
-  }
 }

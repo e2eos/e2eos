@@ -47,7 +47,7 @@ export class ContainerComponent implements OnInit, OnChanges {
 
   }
 
-  loadComponent() {debugger
+  loadComponent() {
     // tslint:disable-next-line: no-string-literal
     let factories = this.resolver['_factories'];
     factories = [...factories].map(([type, f]) => f);
