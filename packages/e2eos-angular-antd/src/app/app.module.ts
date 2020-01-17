@@ -13,12 +13,9 @@ import {ButtonPageComponent} from './pages/button-page/button-page.component';
 import {IconPageComponent} from './pages/icon-page/icon-page.component';
 import {GridPageComponent} from './pages/grid-page/grid-page.component';
 import { InputPageComponent } from './pages/input-page/input-page.component';
-import {LayoutFooterComponent} from './components/layout-footer/layout-footer.component';
-import {LayoutHeaderComponent} from './components/layout-header/layout-header.component';
-import {LayoutSiderComponent} from './components/layout-sider/layout-sider.component';
-import {LayoutContentComponent} from './components/layout-content/layout-content.component';
 import {LayoutPageComponent} from './pages/layout-page/layout-page.component';
 import {CardPageComponent} from './pages/card-page/card-page.component';
+import {CollapsePageComponent} from './pages/collapse-page/collapse-page.component';
 
 registerLocaleData(zh);
 
@@ -31,7 +28,8 @@ registerLocaleData(zh);
     InputPageComponent,
     GridPageComponent,
     LayoutPageComponent,
-    CardPageComponent
+    CardPageComponent,
+    CollapsePageComponent
   ],
   imports: [
     BrowserModule,
