@@ -24,7 +24,7 @@ export const NODE_CONFIG: NodeConfig = {
   values: Object.freeze({
     nzAccordion: false,
     nzBordered: true,
-    nzCollapsePanels: [collapsePanelJason]
+    nzCollapsePanels: []
   }),
   attrs: [
     {
@@ -46,7 +46,7 @@ export const NODE_CONFIG: NodeConfig = {
     //   desc: 'collapsePanels数组集合'
     // }
   ],
-  children: []
+  children: [collapsePanelJason]
 };
 
 
