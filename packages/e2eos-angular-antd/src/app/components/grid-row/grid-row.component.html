@@ -1,3 +1,8 @@
 <div nz-row [nzAlign]="attrs.nzAlign" [nzGutter]="attrs.nzGutter" [nzJustify]="attrs.nzJustify" [nzType]="attrs.nzType">
-  <e2eos-ng-antd-container [node]="node" *ngFor="let node of node.children"></e2eos-ng-antd-container>
+  <div *ngFor="let child of node.children" nz-col [nzOffset]="child.attrs.nzOffset"
+    [nzOrder]="child.attrs.nzOrder" [nzPull]="child.attrs.nzPull" [nzPush]="child.attrs.nzPush" 
+    [nzSpan]="child.attrs.nzSpan" [nzXs]="child.attrs.nzXs" [nzSm]="child.attrs.nzSm" [nzMd]="child.attrs.nzMd"
+    [nzLg]="child.attrs.nzLg" [nzXl]="child.attrs.nzXl" [nzXXl]="child.attrs.nzXXl">
+    <e2eos-ng-antd-container [node]="node" *ngFor="let node of child.children"></e2eos-ng-antd-container>
+  </div>
 </div>

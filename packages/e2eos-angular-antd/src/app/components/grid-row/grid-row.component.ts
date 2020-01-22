@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ComponentBase, AstNode, NodeConfig } from 'e2eos-common';
+import { NODE_CONFIG as COL_NODE_CONFIG, TAG_NAME as COL_TAG_NAME } from '../grid-col/grid-col.component';
+import { NODE_CONFIG as BTN_NODE_CONFIG, TAG_NAME as BTN_TAG_NAME } from '../button/button.component';
 
 export const TAG_NAME = 'e2eos-ng-antd-grid-row';
 
@@ -76,7 +78,31 @@ export const NODE_CONFIG: NodeConfig = {
       desc: '布局模式，可选 flex，现代浏览器 下有效'
     }
   ],
-  children: []
+  children: [{
+    tag: COL_TAG_NAME,
+    attrs: {
+      ...COL_NODE_CONFIG.values
+    },
+    children: [{
+      tag: BTN_TAG_NAME,
+      attrs: {
+        ...BTN_NODE_CONFIG.values
+      },
+      children: BTN_NODE_CONFIG.children
+    }]
+  }, {
+    tag: COL_TAG_NAME,
+    attrs: {
+      ...COL_NODE_CONFIG.values
+    },
+    children: [{
+      tag: BTN_TAG_NAME,
+      attrs: {
+        ...BTN_NODE_CONFIG.values
+      },
+      children: BTN_NODE_CONFIG.children
+    }]
+  }]
 };
 
 export interface AstGridRowAttrs {
