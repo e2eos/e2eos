@@ -1,0 +1,5 @@
+<li nz-menu-group [nzTitle]="attrs.nzTitle">
+  <ul>
+    <e2eos-ng-antd-container [node]="child" *ngFor="let child of node.children"></e2eos-ng-antd-container>
+  </ul>
+</li>

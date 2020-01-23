@@ -1,0 +1,18 @@
+<li nz-submenu [nzTitle]="attrs.nzTitle" [nzOpen]="attrs.nzOpen" [nzDisabled]="attrs.nzDisabled" [nzIcon]="attrs.nzIcon"
+  [nzMenuClassName]="attrs.nzMenuClassName">
+  <ul>
+    <ng-container *ngFor="let child of node.children">
+      <ng-container [ngSwitch]="child.tag">
+        <li nz-menu-item *ngSwitchCase="'e2eos-ng-antd-menu-item'" [nzDisabled]="child.attrs.nzDisabled" [nzSelected]="child.attrs.nzSelected"
+        [nzMatchRouter]="child.attrs.nzMatchRouter" [nzMatchRouterExact]="child.attrs.nzMatchRouterExact">
+          <e2eos-ng-antd-container [node]="subChild" *ngFor="let subChild of child.children"></e2eos-ng-antd-container>
+        </li>
+        <li nz-submenu *ngSwitchCase="'e2eos-ng-antd-submenu'" [nzTitle]="child.attrs.nzTitle" [nzOpen]="child.attrs.nzOpen" [nzDisabled]="child.attrs.nzDisabled" [nzIcon]="child.attrs.nzIcon"
+        [nzMenuClassName]="child.attrs.nzMenuClassName">
+          <e2eos-ng-antd-container [node]="subChild" *ngFor="let subChild of child.children"></e2eos-ng-antd-container>
+        </li>
+        <e2eos-ng-antd-container *ngSwitchDefault [node]="child"></e2eos-ng-antd-container>
+      </ng-container>
+    </ng-container>
+  </ul>
+</li>
