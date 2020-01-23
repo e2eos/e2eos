@@ -22,6 +22,10 @@ import {CardMetaComponent} from './components/card-meta/card-meta.component';
 import {CardGridComponent} from './components/card-grid/card-grid.component';
 import {CardTabComponent} from './components/card-tab/card-tab.component';
 import {CollapseComponent} from './components/collapse/collapse.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { SubmenuComponent } from './components/submenu/submenu.component';
+import { MenuGroupComponent } from './components/menu-group/menu-group.component';
 
 
 
@@ -43,7 +47,11 @@ import {CollapseComponent} from './components/collapse/collapse.component';
     CardMetaComponent,
     CardGridComponent,
     CardTabComponent,
-    CollapseComponent
+    CollapseComponent,
+    MenuComponent,
+    MenuItemComponent,
+    SubmenuComponent,
+    MenuGroupComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -62,7 +70,11 @@ import {CollapseComponent} from './components/collapse/collapse.component';
     CardMetaComponent,
     CardGridComponent,
     CardTabComponent,
-    CollapseComponent
+    CollapseComponent,
+    MenuComponent,
+    MenuItemComponent,
+    SubmenuComponent,
+    MenuGroupComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -90,7 +102,11 @@ import {CollapseComponent} from './components/collapse/collapse.component';
     CardMetaComponent,
     CardGridComponent,
     CardTabComponent,
-    CollapseComponent
+    CollapseComponent,
+    MenuComponent,
+    MenuItemComponent,
+    SubmenuComponent,
+    MenuGroupComponent
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })

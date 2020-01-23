@@ -1,0 +1,48 @@
+<ul nz-menu [nzMode]="attrs.nzMode" [nzInlineCollapsed]="attrs.nzInlineCollapsed"
+  [nzInlineIndent]="attrs.nzInlineIndent" [nzSelectable]="attrs.nzSelectable" [nzTheme]="attrs.nzTheme">
+
+  <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: node.children }"></ng-container>
+  <ng-template #menuTpl let-menus>
+    <ng-container *ngFor="let menu of menus">
+      <li
+        *ngIf="menu.tag === 'e2eos-ng-antd-menu-item'"
+        nz-menu-item
+        [nzDisabled]="menu.attrs.nzDisabled" [nzSelected]="menu.attrs.nzSelected"
+        [nzMatchRouter]="menu.attrs.nzMatchRouter" [nzMatchRouterExact]="menu.attrs.nzMatchRouterExact"
+      >
+        <e2eos-ng-antd-container [node]="subChild" *ngFor="let subChild of menu.children"></e2eos-ng-antd-container>
+      </li>
+      <li
+        *ngIf="menu.tag === 'e2eos-ng-antd-submenu'"
+        nz-submenu
+        [nzTitle]="menu.attrs.nzTitle" [nzOpen]="menu.attrs.nzOpen" [nzDisabled]="menu.attrs.nzDisabled" [nzIcon]="menu.attrs.nzIcon"
+        [nzMenuClassName]="menu.attrs.nzMenuClassName"
+      >
+        <ul>
+          <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"></ng-container>
+        </ul>
+      </li>
+      <li
+        *ngIf="menu.tag === 'e2eos-ng-antd-menu-group'"
+        nz-menu-group [nzTitle]="menu.attrs.nzTitle">
+        <ul>
+          <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"></ng-container>
+        </ul>
+      </li>
+    </ng-container>
+  </ng-template>
+
+  <!-- <ng-container *ngFor="let child of node.children">
+    <ng-container [ngSwitch]="child.tag">
+      <li nz-menu-item *ngSwitchCase="'e2eos-ng-antd-menu-item'" [nzDisabled]="child.attrs.nzDisabled" [nzSelected]="child.attrs.nzSelected"
+      [nzMatchRouter]="child.attrs.nzMatchRouter" [nzMatchRouterExact]="child.attrs.nzMatchRouterExact">
+        <e2eos-ng-antd-container [node]="subChild" *ngFor="let subChild of child.children"></e2eos-ng-antd-container>
+      </li>
+      <li nz-submenu *ngSwitchCase="'e2eos-ng-antd-submenu'" [nzTitle]="child.attrs.nzTitle" [nzOpen]="child.attrs.nzOpen" [nzDisabled]="child.attrs.nzDisabled" [nzIcon]="child.attrs.nzIcon"
+      [nzMenuClassName]="child.attrs.nzMenuClassName">
+        <e2eos-ng-antd-container [node]="subChild" *ngFor="let subChild of child.children"></e2eos-ng-antd-container>
+      </li>
+      <e2eos-ng-antd-container *ngSwitchDefault [node]="child"></e2eos-ng-antd-container>
+    </ng-container>
+  </ng-container> -->
+</ul>

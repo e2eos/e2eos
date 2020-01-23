@@ -1,0 +1,6 @@
+<li nz-submenu [nzTitle]="attrs.nzTitle" [nzOpen]="attrs.nzOpen" [nzDisabled]="attrs.nzDisabled" [nzIcon]="attrs.nzIcon"
+  [nzMenuClassName]="attrs.nzMenuClassName">
+  <ul>
+    <e2eos-ng-antd-container [node]="child" *ngFor="let child of node.children"></e2eos-ng-antd-container>
+  </ul>
+</li>
