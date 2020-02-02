@@ -1,0 +1,4 @@
+<li nz-menu-item [nzDisabled]="attrs.nzDisabled" [nzSelected]="attrs.nzSelected"
+  [nzMatchRouter]="attrs.nzMatchRouter" [nzMatchRouterExact]="attrs.nzMatchRouterExact">
+  <e2eos-ng-antd-container [node]="child" *ngFor="let child of node.children"></e2eos-ng-antd-container>
+</li>
