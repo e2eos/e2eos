@@ -17,6 +17,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { CardPageComponent } from './pages/card-page/card-page.component';
 import { CollapsePageComponent } from './pages/collapse-page/collapse-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
+import { SelectPageComponent } from './pages/select-page/select-page.component';
 
 registerLocaleData(zh);
 
@@ -32,6 +33,7 @@ registerLocaleData(zh);
     CardPageComponent,
     CollapsePageComponent,
     MenuPageComponent,
+    SelectPageComponent,
   ],
   imports: [
     BrowserModule,

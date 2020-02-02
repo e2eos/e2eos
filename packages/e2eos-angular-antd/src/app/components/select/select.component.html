@@ -1,0 +1,21 @@
+<nz-select
+  [ngModel]="attrs.ngModel" [nzAllowClear]="attrs.nzAllowClear" [nzPlaceHolder]="attrs.nzPlaceHolder"
+  [nzAutoClearSearchValue]="attrs.nzAutoClearSearchValue" [nzAllowClear]="attrs.nzAllowClear" [nzOpen]="attrs.nzOpen"
+  [nzAutoFocus]="attrs.nzAutoFocus" [nzDisabled]="attrs.nzDisabled" [nzDropdownClassName]="attrs.nzDropdownClassName"
+  [nzDropdownMatchSelectWidth]="attrs.nzDropdownMatchSelectWidth" [nzDropdownStyle]="attrs.nzDropdownStyle"
+  [nzServerSearch]="attrs.nzServerSearch" [nzMaxMultipleCount]="attrs.nzMaxMultipleCount" [nzMode]="attrs.nzMode"
+  [nzPlaceHolder]="attrs.nzPlaceHolder" [nzShowArrow]="attrs.nzShowArrow" [nzShowSearch]="attrs.nzShowSearch"
+  [nzSize]="attrs.nzSize" [nzTokenSeparators]="attrs.nzTokenSeparators" [nzLoading]="attrs.nzLoading"
+  [nzMaxTagCount]="attrs.nzMaxTagCount">
+  <ng-container *ngFor="let child of node.children">
+    <nz-option-group *ngIf="child.tag === 'e2eos-ng-antd-option-group'" [nzLabel]="child.attrs.nzLabel">
+      <nz-option *ngFor="let subChild of child.children" [nzValue]="subChild.attrs.nzValue"
+      [nzLabel]="subChild.attrs.nzLabel" [nzHide]="subChild.attrs.nzHide" [nzDisabled]="subChild.attrs.nzDisabled"
+      [nzCustomContent]="subChild.attrs.nzCustomContent"></nz-option>
+    </nz-option-group>
+    <nz-option *ngIf="child.tag === 'e2eos-ng-antd-option'" [nzValue]="child.attrs.nzValue"
+      [nzLabel]="child.attrs.nzLabel" [nzHide]="child.attrs.nzHide" [nzDisabled]="child.attrs.nzDisabled"
+      [nzCustomContent]="child.attrs.nzCustomContent">
+    </nz-option>
+  </ng-container>
+</nz-select>

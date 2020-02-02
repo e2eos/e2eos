@@ -26,6 +26,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { SubmenuComponent } from './components/submenu/submenu.component';
 import { MenuGroupComponent } from './components/menu-group/menu-group.component';
+import { SelectComponent } from './components/select/select.component';
 
 
 
@@ -51,7 +52,8 @@ import { MenuGroupComponent } from './components/menu-group/menu-group.component
     MenuComponent,
     MenuItemComponent,
     SubmenuComponent,
-    MenuGroupComponent
+    MenuGroupComponent,
+    SelectComponent
   ],
   declarations: [
     JsonEditorComponent,
@@ -74,7 +76,8 @@ import { MenuGroupComponent } from './components/menu-group/menu-group.component
     MenuComponent,
     MenuItemComponent,
     SubmenuComponent,
-    MenuGroupComponent
+    MenuGroupComponent,
+    SelectComponent
   ],
   imports: [
     NgJsonEditorModule,
@@ -106,7 +109,8 @@ import { MenuGroupComponent } from './components/menu-group/menu-group.component
     MenuComponent,
     MenuItemComponent,
     SubmenuComponent,
-    MenuGroupComponent
+    MenuGroupComponent,
+    SelectComponent
   ],
   providers: [{provide: NZ_I18N, useValue: zh_CN}],
 })
