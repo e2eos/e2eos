@@ -17,8 +17,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   height: 100%;
+}
+
+.drop-node-placeholder {
+  .icon-layout,
+  .text-layout {
+    display: none;
+  }
+
+  .drop-placeholder {
+    display: block;
+  }
 }
 </style>

@@ -8,33 +8,45 @@
 </template>
 
 <script>
-import AstNode from '../../components/ast-node/ast-node';
+import AstNode from "../../components/ast-node/ast-node";
+
 export default {
   data() {
     return {
       page: {
-        tag: 'a-button',
-        attrs: {
-          type: 'primary'
-        },
+        tag: "ast-form",
+        attrs: {},
         children: [
           {
-            tag: 'a-icon',
+            tag: "ast-button",
             attrs: {
-              type: 'left'
+              type: "primary"
             },
-            children: []
+            children: [
+              {
+                tag: "ast-text",
+                attrs: {
+                  text: "primary"
+                },
+                children: []
+              }
+            ]
           },
           {
-            tag: 'ast-text-node',
+            tag: "ast-input",
             attrs: {
-              text: 'primary'
+              label: 'Label'
             },
             children: []
           }
         ]
-      }
-    }
+      },
+      list2: [
+        { name: "Juan", id: 5 },
+        { name: "Edgard", id: 6 },
+        { name: "Johnson", id: 7 }
+      ]
+    };
   },
   components: {
     AstNode
@@ -44,7 +56,6 @@ export default {
 
 <style lang="scss" scoped>
 .component-canvas {
-
   height: 100%;
 
   /deep/ .ant-card {
