@@ -58,3 +58,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  .ast-drop-node {
+    min-width: 10px;
+  }
+</style>
